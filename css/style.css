@@ -12,6 +12,9 @@
 
 /*Propriétés du Header*/
 
+body {
+    width: 100%;
+}
 header img
 {
     display: flex;
@@ -62,38 +65,36 @@ div h1
     font-weight: bold;
     font-size: 1.2rem;
 }
-div p
-{
+header div p {
     margin-top: 10px;
 }
-/* @media screen and (max-width: 992px) and (min-width: 768px){
-    *
-    {
-        background-color:
-    }
-}*/
 
 @media screen and (max-width: 768px){
     body{
         margin-top: 20px;
+        width: 100%;
     }
     header img {
         position: static;
         margin: auto;
-        
+    }
+    header div {
+        margin-left: 25px;
     }
     nav.onglets{
-        justify-content: center;
-        align-items: center;
+        width: 95%;
+        justify-content: space-around;
+
     }
     nav.onglets a {
-        padding-bottom: 15px;
+        padding: 35px 55px 10px 55px;        
+        width: 80%;
     }
     nav.onglets a:hover
     {
         border-top: 0;
         border-bottom: 3px solid;
-        border-color: rgba(211, 211, 211, 0.251);
+        border-color: blue
     }
     nav.onglets a:focus
     {
@@ -151,6 +152,9 @@ form i {
 }
 
 @media screen and (max-width: 768px) {
+    form {
+        margin-left: 20px;
+    }
     form i .ville #deux{
         display: flex;
         align-items: center;
@@ -179,6 +183,7 @@ form i {
 }
 .filtres div 
 {
+    flex-direction: row;
     height: 40px;
     border:2px solid lightgray;
     border-radius: 30px;
@@ -203,6 +208,7 @@ form i {
 .filtres div p {
     margin: 10px;
     padding: 0;
+    font-size: large;
 }
 #economique:hover, #familial:hover, #romantique:hover, #animaux:hover
 {
@@ -214,18 +220,18 @@ nav h2
     padding: 40px 0px 0 60px;
 } 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1028px) {
     
     nav h2
     {
-        margin-right: 200px;
-        padding: 2px 0px 0 60px;
+        width: 100%;
+        margin-top: 30px;
+        padding: 2px 0px 0 30px;
     }
 
     .filtres div
     {
-       margin: 10px 0 10px 10px;
-
+       margin: 10px 0 10px 20px;
     }
 }
 /* INFO ICONE */
@@ -242,18 +248,22 @@ padding-bottom: 0;
 }
 .parent-icon {
     margin: 20px 0;
-    margin-left: 0px;
+    padding: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     border: 2px solid #f2f2f2;
     border-radius: 25px;
     margin-right: 5px;
     color: blue;
 }
-
+@media screen and (max-width: 768px) {
+    .info {
+        margin-left: 20px;
+    }
+}
 /*Sert à aligner hébergement et les plus populaires*/
 
 .align {
@@ -261,8 +271,18 @@ padding-bottom: 0;
     justify-content: flex-start;
     flex-direction: row;
     flex-wrap: wrap;
+    width: 100%;
+    margin: 0;
 }
-
+@media screen and (max-width: 768px) {
+    .align {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column-reverse;
+        flex-wrap: wrap;
+        margin-left: 0;
+    }
+}
 /*Section hébergement*/
 
 
@@ -279,9 +299,9 @@ padding-bottom: 0;
     margin: 10px 30px 10px 10px;
 }    
 .hébergements h2 {
-    margin: 30px 0 30px 20px;
+    margin: 55px 0 30px 20px;
     font-weight: 700;
-    width: 700px;
+    width: 300px;
     height: 21px;
 }
 .bloc1 {
@@ -289,13 +309,14 @@ padding-bottom: 0;
     justify-content: space-between;
     flex-direction: row;
     margin: 0;
-    margin-bottom: 5px;
+    padding: 0;
 }
 .bloc2 {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
-    margin: 5px;
+    margin: 0;
+    padding: 0;
 }
 .cards {
     box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.068) ;
@@ -303,40 +324,23 @@ padding-bottom: 0;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    width: 26%;
-    min-width: 140px;
-    height: 210px;
+    width: 29%;
+    min-width: 170px;
+    height: 220px;
     background-color: whitesmoke;
     border-radius: 20px;
+    border-top: 4px solid whitesmoke;
+    border-right: 4px solid whitesmoke;
+    border-left: 4px solid whitesmoke;
     transition: all 0.4S ease 0s;
     overflow: hidden;
-    margin: 15px;
+    margin: 10px;
 }
 .cards:hover {
     transform: translateY(-3px);
     text-decoration: none;
 }
-.cards_mer{
 
-    box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.068) ;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    width: 26%;
-    min-width: 140px;
-    height: 210px;
-    background-color: whitesmoke;
-    border-radius: 20px;
-    transition: all 0.4S ease 0s;
-    overflow: hidden;
-    margin: 15px;
-    margin-left: -1.5%;
-}
-.cards_mer:hover {
-    transform: translateY(-3px);
-    text-decoration: none;
-}
 .images_cannebière {
     margin: 0;
     width: 100%;
@@ -353,7 +357,7 @@ padding-bottom: 0;
 }
 .images_amina img {
     object-fit: cover;
-    width: 220%;
+    width: 260%;
     height: 140px;
     margin: 0;
 }
@@ -366,12 +370,9 @@ padding-bottom: 0;
     margin: 0;
     margin-top: -6px;
 }
-.body_cannebière .special {
-    font-size: 0.77rem;
-}
+
 .body_cannebière h3 {
-    font-style: none;
-    font-size: 0.80rem;
+    font-size: 0.85rem;
     margin-bottom: 0;
     color: black;
 }
@@ -402,7 +403,7 @@ padding-bottom: 0;
     color: lightgrey;
 }
 .afficherplus {
-    margin: 10px 0px 8px 20px;
+    margin: 10px 0px 30px 25px;
     font-weight: 800;
     width: 150px
 }
@@ -411,6 +412,57 @@ padding-bottom: 0;
     color: black;
 }
 
+@media screen and (max-width: 768px) {
+    .hébergements{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        width: 95%;
+        min-width: 0px;
+        height: auto;
+        background-color: transparent;
+        margin: 0px;
+        margin-top: 20px;
+        margin-left: 15px;
+        padding: 0px;
+    }
+    .hébergements h2 {
+        margin: 10px 0 10px 20px;
+    }    
+    .cards {
+        box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.068) ;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        width: 100%;
+        max-width: 370px;
+        height: 210px;
+        background-color: whitesmoke;
+        border-radius: 20px;
+        transition: all 0.4S ease 0s;
+        overflow: hidden;
+        margin: 15px 0;
+    }
+    .bloc1, .bloc2 {
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+        margin-left: 0px;
+    }
+    .images_cannebière img {
+        object-fit: cover;
+        width: 190%;
+        height: 140px;
+        margin: 0;
+    }
+    .images_amina img {
+        object-fit: cover;
+        width: 325%;
+        height: 140px;
+        margin: 0;
+    }
+}
 /*Section Populaires*/
 
 .populaires {
@@ -424,6 +476,11 @@ padding-bottom: 0;
     border-radius: 20px;
     margin: 10px;
     padding-bottom: 20px;
+}
+.populaires em {
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 700;
 }
 @media screen and (min-width: 768px) and (max-width: 1028px) {
     .populaires {
@@ -451,22 +508,24 @@ padding-bottom: 0;
 
 #Plus i {
     font-size: 1.5rem;
-    margin: 0 20px 20px 30px;
+    margin: 20px 30px 20px 30px;
 }
 .cards2 {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    width: 75%;
+    margin: 0;    
+    width: 75%; 
     min-width: 250px;
     height: 150px;
-    background-color: whitesmoke;
     border-radius: 20px;
+    border: 4px solid whitesmoke;
+    background-color: whitesmoke;
     overflow: hidden ;
     transition: all 0.4S ease 0s;
     margin: 15px auto;
     box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.068) ;
+}
+.cards2 a {
+    display: flex;
+    flex-direction: row;
 }
 
 .cards2:hover {
@@ -489,6 +548,9 @@ padding-bottom: 0;
     width: 225px;
     padding-left: 0px;
 }
+.images_bleu img {
+    margin-top: -100px;
+}
 .body_soleil {
     flex-direction: column;
     margin: 0px;
@@ -498,10 +560,9 @@ padding-bottom: 0;
     font-size: 0.7rem;
     color: black;
     background-color: whitesmoke;
-    padding: 25px 10px 25px 15px;
+    padding: 0px 10px 20px 15px;
 }
 .body_soleil h3 {
-    font-style: none;
     font-size: 0.90rem;
     margin-bottom: 0;
 }
@@ -514,7 +575,17 @@ padding-bottom: 0;
     margin: 0;
     margin-top: 30px;
     color: blue;
-    font-style: none;
+    position: relative;
+}
+.star2_haut {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    padding: 0;
+    margin: 0;
+    margin-top: 18px;
+    color: blue;
+    position: relative;
 }
 .nostar2 {
     display: flex;
@@ -524,7 +595,23 @@ padding-bottom: 0;
     margin: 0;
     color: lightgray;
 }
-
+@media screen and (max-width: 768px) {
+    .populaires {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        width: 100%;
+        height: 625px;
+        background-color: rgba(202, 199, 199, 0.483);
+        border-radius: 0px;
+        margin: 0px;
+        padding: 0;
+        padding-bottom: 20px;
+    }
+    .cards2 {
+        width: 85%;
+    }
+}
 /*Activités à Marseille*/
 
 .Activités {
@@ -534,21 +621,23 @@ padding-bottom: 0;
 
 .Activités h2 {
     width: auto;
+    color: black;
     height: 40px;
-    width: 1500px;
+    width: 50%;
     margin: 40px 0 0 70px;
+    cursor: auto;
     
 }
 .container_act {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 100%;
+    width: 98%;
     margin: 0;
     padding: 0;
 }
 .container_act p {
-    background-color: whitesmoke;
+    background-color: white;
     font-weight: 900;
     padding: 15px 15px 15px 20px;
     margin: 0;
@@ -577,6 +666,18 @@ padding-bottom: 0;
     .container_act .conteneur2 {
         margin-left: 40px;
     }
+    .conteneur1 {
+        margin-bottom: 0px;
+    }
+    .colone1, .colone2 {
+        margin-bottom: 0;
+    }
+    .conteneur2 {
+        margin-top: 0px;
+    }
+    .colone3, .colone4 {
+        margin-top: 0px;
+    }
 }
 .conteneur2 {
     margin-left: 0;
@@ -594,6 +695,7 @@ padding-bottom: 0;
     min-width: auto;   
     transition: all 0.4S ease 0s;
     overflow: hidden;
+    box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.068) ;
 }
 .colone1 div:hover, .colone2 div:hover, .colone3 div:hover, .colone4 div:hover {
     transform: translateY(-3px);
@@ -612,7 +714,7 @@ padding-bottom: 0;
     height: 445px;
 }
 .Vieuxport img {
-    height: 90%;
+    height: 95%;
     object-fit: cover;
 }
 
@@ -621,7 +723,7 @@ padding-bottom: 0;
     height: 254px;
 }
 .Fort img {
-    height: 83%;
+    height: 81%;
     object-fit: cover;
 }
 .ile {
@@ -642,7 +744,7 @@ padding-bottom: 0;
 }
 .NotreDame {
     width: 100%;
-    height: 195px;
+    height: 204px;
 }
 .NotreDame img {
     height: 77%;
@@ -656,6 +758,31 @@ padding-bottom: 0;
     height: 79.5%;
     object-fit: cover;
 }
+@media screen and (max-width: 768px) {
+    .Activités h2 {
+        width: 90%;
+        margin-left: 20px;
+        margin-bottom: 0px;
+    }
+    .container_act, .conteneur1, .conteneur2, .colone1, .colone2, .colone3, .colone4 {
+        flex-direction: column;
+        height: auto;
+    }
+    .conteneur1, .conteneur2 {
+        width: 100%;
+        margin-left: 0;
+    }
+    .colone1, .colone2, .colone3, .colone4 {
+        width: 90%;
+    }
+    .colone1 div, .colone2 div, .colone3 div, .colone4 div {
+        height: 200px;
+        margin: 10px 0
+    }
+    .colone1 div img, .colone2 div img, .colone3 div img, .colone4 div img {
+        height: 77%;
+    }
+}
 
 /*Pied de page*/
 
@@ -664,22 +791,59 @@ padding-bottom: 0;
     display: flex;
     color: black;
 }
+.Pied h3 {
+    width: 200px;
+}
 .Pied p {
     list-style-type: none;
     color: black;
+    width: 250px;
 }
 .Propos {
     width: 30%;
     margin-left: 40px;
-    margin-right: 20%;
+    margin-right: 15%;
 }
 .Hebergements {
     width: 30%;
     margin-left: 10px;
-    margin-right: 20%;
+    margin-right: 15%;
 }
 .Assistance {
     width: 30%;
     margin-left: 10px;
-    margin-right: 20%;
+    margin-right: 15%;
+}
+@media screen and (min-width: 768px) and (max-width: 1028px) {
+    .Propos {
+        width: 20%;
+        margin-left: 40px;
+        margin-right: 15%;
+    }
+    .Hebergements {
+        width: 20%;
+        margin-left: 10px;
+        margin-right: 15%;
+    }
+    .Assistance {
+        width: 20%;
+        margin-left: 10px;
+        margin-right: 15%;
+    }
+}
+@media screen and (max-width: 768px) {
+    .Pied {
+        flex-direction: column;
+        height: 550px;
+    }
+    .Pied h3 {
+        font-size: 20px;
+    }
+    .Pied p {
+        font-size: 15px;
+    }
+    .Propos, .Hebergements, .Assistance {
+        width: 90%;
+        margin: 10px 10px 0 30px;
+    }
 }
